@@ -1,0 +1,32 @@
+{
+  "name": "workflow_mal",
+  "version": "1.0.0",
+  "description": "mal for å starte ett nytt prosjekt, web-dev",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier -w src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "prepare": "husky install"
+  },
+  "author": "erlend bergeng",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
+}
